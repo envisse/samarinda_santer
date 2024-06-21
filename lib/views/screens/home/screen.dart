@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => BeritaCubit(),
+      create: (context) => BeritaCubit()..getList(),
       child: Scaffold(
         appBar: AppBar(
           actions: [

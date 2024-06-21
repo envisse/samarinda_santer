@@ -12,14 +12,14 @@ class LoginScreen extends StatelessWidget {
     final TextEditingController password = TextEditingController();
 
     return Scaffold(
-      body: Row(
+      body: Column(
         children: [
           const SizedBox(height: 50),
           const TextWidget(text: 'Login', textStyling: TextStyling.bodyMedium),
           const SizedBox(height: 20),
-          TextFieldWidget(controller: login),
+          TextFieldWidget(controller: login, hintText: 'Username',),
           const SizedBox(height: 10),
-          TextFieldWidget(controller: password, obsecureText: true),
+          TextFieldWidget(controller: password, obsecureText: true, hintText: 'Password',),
           const SizedBox(height: 30),
           ButtonContainedWidget(
               onPressed: () {
